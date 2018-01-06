@@ -9,6 +9,9 @@ ul {
   padding: 2px 13px;
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 // home page hedaer
 .header {
   border-bottom: 1px solid grey;
@@ -56,11 +59,18 @@ ul {
       top: 50%;  
       left: 50%;
       transform: translate(-50%, -50%);
-
-      h1 {
-        margin: 0;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 30px;
+      a {
+        &:link {
+          color: white;
+        }
+        &:visited {
+          color: white;
+        }
+        h1 {
+          margin: 0;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-size: 30px;
+        }
       }
     }
   }
@@ -102,7 +112,7 @@ ul {
           text-align: center;
           a {
             font-size: 20px;
-            text-decoration: none;
+
             &:visited {
               color: black;
             }
@@ -164,7 +174,7 @@ ul {
           text-align: center;
           a {
             font-size: 20px;
-            text-decoration: none;
+
             &:visited {
               color: black;
             }
@@ -189,6 +199,81 @@ ul {
         }
       }
       
+    }
+  }
+}
+
+// projects header
+.header-projects {
+  border-bottom: 1px solid grey;
+  height: 60px;
+  display: flex;
+  background: black;
+  color: white;
+  padding: 0 5px;
+  position: relative;
+
+  @media screen and (max-width: 480px ){
+    .header-logo {
+      height: 40px;
+      margin: auto 0;
+
+      img {
+        width: 40px;
+      }
+    }
+    .header-text {
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        margin: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: orange;
+      }
+      img {
+        width: 24px;
+        height: 22px;
+        margin: auto 5px;
+      }
+      h2 {
+        margin: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 25px;
+        padding-top: 3px;
+
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px ){
+    .header-logo {
+      height: 40px;
+      margin: auto 0;
+
+      img {
+        width: 40px;
+      }
+    }
+    .header-text {
+      position: absolute;
+      top: 50%;  
+      left: 50%;
+      transform: translate(-50%, -50%);
+      a {
+        &:link {
+          color: white;
+        }
+        &:visited {
+          color: white;
+        }
+        h1 {
+          margin: 0;
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          font-size: 30px;
+        }
+      }
     }
   }
 }

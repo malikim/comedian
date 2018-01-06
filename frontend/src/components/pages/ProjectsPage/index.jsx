@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from '../../organisms/Projects/Templates/Header'
 
 const ProjectsPage = () => {
   return (
-    <div>
-
+    <div className='body'>
+        <Header />
     </div>
   )
 }

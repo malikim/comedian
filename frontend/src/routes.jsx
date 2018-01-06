@@ -1,7 +1,8 @@
 import React from 'react';
-import {Switch, Route } from "react-router-dom";
+import {Switch, Route, Redirect } from "react-router-dom";
 
 import HomePage from './containers/HomePageContainer';
+import ProjectsPageContainer from './containers/ProjectsPageContainer';
 
 import 'assets/styles/index.scss';
 
@@ -10,6 +11,7 @@ class Routes extends React.Component {
     return (
       <Switch>
           <Route exact path="/" component={HomePage}/>
+          <Route exact path="/projects" component={ProjectsPageContainer}/>
       </Switch>
     );
   }
