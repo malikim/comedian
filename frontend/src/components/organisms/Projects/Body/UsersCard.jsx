@@ -20,10 +20,30 @@ export default class UsersCard extends Component {
                     </div>
                 </div>
                 <div className="user-card__content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Inventore possimus mollitia iste facere ex? Sit vel voluptatum facilis velit, 
-                    molestiae tenetur inventore vitae minima quos dolorem autem, iste vero distinctio.
-                    </p>
+                    <div className="stendup">
+                        <h3>12.12.12</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Inventore possimus mollitia iste facere ex? Sit vel voluptatum facilis velit, 
+                        molestiae tenetur inventore vitae minima quos dolorem autem, iste vero distinctio.
+                        </p>
+                    </div>
+
+                    <div className="stendup">
+                        <h3>12.12.13</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Inventore possimus mollitia iste facere ex? Sit vel voluptatum facilis velit, 
+                        molestiae tenetur inventore vitae minima quos dolorem autem, iste vero distinctio.
+                        </p>
+                    </div>
+
+                    <div className="stendup">
+                        <h3>12.12.14</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Inventore possimus mollitia iste facere ex? Sit vel voluptatum facilis velit, 
+                        molestiae tenetur inventore vitae minima quos dolorem autem, iste vero distinctio.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         )
