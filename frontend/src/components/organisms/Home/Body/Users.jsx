@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
 import arrow from '../../../../assets/images/arrow.png'
-
+import logo from '../../../../assets/images/ketrin.jpg'
 
 export default class Users extends Component {
     constructor(props) {
@@ -10,20 +10,45 @@ export default class Users extends Component {
             isOpen: true,
             users: [
                 {
-                    name: "Lolkekkek"
+                    name: "Ketrin",
+                    logo: logo,
+                    counter: 123
                 },
                 {
-                    name: "lolkekkek"
+                    name: "Metr1ckzu",
+                    counter: 1223,
+                    logo: "https://avatars1.githubusercontent.com/u/17123372?s=64&v=4"
                 },
                 {
-                    name: "chkekeburek"
+                    name: "Zoxon",
+                    counter: 12223,
+                    logo: "https://avatars3.githubusercontent.com/u/24412021?s=64&v=4"
                 },
                 {
-                    name: "sukkekkeka"
+                    name: "Anima",
+                    counter: 123,
+                    logo: "https://avatars0.githubusercontent.com/u/24238226?s=60&v=4"
                 },
                 {
-                    name: "vodkasuka"
-                }
+                    name: "Alex",
+                    counter: 223,
+                    logo: "https://avatars0.githubusercontent.com/u/24238226?s=60&v=4"
+                },
+                {
+                    name: "Gen1us2k",
+                    counter: 133,
+                    logo: "https://avatars2.githubusercontent.com/u/153196?s=64&v=4"
+                },
+                {
+                    name: "Mirotvorez",
+                    counter: 412,
+                    logo: "https://avatars0.githubusercontent.com/u/24238226?s=60&v=4"
+                },
+                {
+                    name: "An4morph",
+                    counter: 1232,
+                    logo: "https://avatars2.githubusercontent.com/u/22574900?s=64&v=4"
+                },
             ]
         }
     }
@@ -46,7 +71,7 @@ export default class Users extends Component {
                     <ul className={"acardeon__description " + (this.state.isOpen ? 'show' : 'hidden')}>
                         {this.state.users.map((item, index) => {
                             return (
-                                <li key={index}><Link to={"/users"}>{item.name}</Link></li>
+                                <li key={index}><img src={item.logo} alt=""/><Link to={"/users"}>{item.name}</Link><p>{item.counter}</p></li>
                             )
                         })}
                     </ul>

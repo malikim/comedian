@@ -82,7 +82,7 @@ h3 {
   }
 }
 //home page projects
-.projects, .users {
+.projects{
 
   @media screen and (max-width: 480px ){
     .acardeon {
@@ -115,7 +115,6 @@ h3 {
 
         li {
           margin: 10px 0;
-          text-align: center;
           a {
             font-size: 20px;
 
@@ -125,6 +124,11 @@ h3 {
             &:link {
               color: black;
             }
+          }
+          img {
+            border-radius: 30px;
+            width: 35px;
+            height: 35px;
           }
         }
         &.show {
@@ -176,10 +180,11 @@ h3 {
       .acardeon__description {
 
         li {
+          display: flex;
           margin: 10px 0;
-          text-align: center;
           a {
             font-size: 20px;
+            margin: auto 10px;
 
             &:visited {
               color: black;
@@ -188,9 +193,165 @@ h3 {
               color: black;
             }
           }
+          img {
+            border-radius: 30px;
+            width: 35px;
+            height: 35px;
+          }
+        }
+        &.show {
+          max-height: 100em;
+          overflow: hidden;
+          -webkit-transition: max-height .50s;
+          -o-transition: max-height .50s;
+          transition: max-height .50s;
+        }
+        &.hidden {
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height .35s;
+          -o-transition: max-height .35s;
+          transition: max-height .35s;
+        }
+      }
+      
+    }
+  }
+}
+
+.users {
+
+  @media screen and (max-width: 480px ){
+    .acardeon {
+
+      .acardeon__title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+        padding: 0 10px;
+
+        img {
+          margin: 27px 15px;
+          margin-bottom: 3px;
+          width: 30px;
+          height: 30px;
+
+        }
+        h1 {
+          margin-bottom: 3px;
+        }
+        .down {
+          transition: all 0.4s ease;
+        }
+        .up {
+          transform: rotateZ(-180deg);
+          transition: all 0.4s ease;
+        }
+      }
+      .acardeon__description {
+
+        li {
+          display: flex;
+          margin: 10px 0;
+          position: relative;
+          a {
+            font-size: 20px;
+            margin: auto 10px;
+
+            &:visited {
+              color: black;
+            }
+            &:link {
+              color: black;
+            }
+          }
+          img {
+            border-radius: 30px;
+            width: 35px;
+            height: 35px;
+          }
+          p {
+            margin: auto 0;
+            position: absolute;
+            right: 0;
+            top: 10px;
+          }
         }
         &.show {
           max-height: 10em;
+          overflow: hidden;
+          -webkit-transition: max-height .50s;
+          -o-transition: max-height .50s;
+          transition: max-height .50s;
+        }
+        &.hidden {
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height .35s;
+          -o-transition: max-height .35s;
+          transition: max-height .35s;
+        }
+      }
+      
+    }
+  }
+
+  @media screen and (max-width: 860px ){
+    .acardeon {
+
+      .acardeon__title {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid grey;
+        padding: 0 10px;
+
+        img {
+          margin: 27px 15px;
+          margin-bottom: 3px;
+          width: 30px;
+          height: 30px;
+
+        }
+        h1 {
+          margin-bottom: 3px;
+        }
+        .down {
+          transition: all 0.4s ease;
+        }
+        .up {
+          transform: rotateZ(-180deg);
+          transition: all 0.4s ease;
+        }
+      }
+      .acardeon__description {
+        li {
+          display: flex;
+          margin: 10px 0;
+          position: relative;
+          a {
+            font-size: 20px;
+            margin: auto 10px;
+            &:visited {
+              color: black;
+            }
+            &:link {
+              color: black;
+            }
+          }
+          img {
+            border-radius: 30px;
+            width: 35px;
+            height: 35px;
+          }
+          p {
+            margin: auto 0;
+            position: absolute;
+            right: 0;
+            top: 10px;
+          }
+        }
+        &.show {
+          max-height: 100em;
           overflow: hidden;
           -webkit-transition: max-height .50s;
           -o-transition: max-height .50s;
@@ -324,8 +485,9 @@ h3 {
     border: 1px solid grey;
     border-radius: 3px;
     width: 90%;
+    margin: 10px auto;
     padding: 10px;
-    min-height: 400px;
+    min-height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     .user-card__content {
@@ -380,8 +542,9 @@ h3 {
   .users-card {
     border: 1px solid grey;
     border-radius: 3px;
+    margin: 10px auto;
     padding: 10px;
-    min-height: 400px;
+    min-height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     .user-card__content {

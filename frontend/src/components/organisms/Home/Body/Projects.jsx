@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom'
 import arrow from '../../../../assets/images/arrow.png'
+import logo from '../../../../assets/images/ketrin.jpg'
 
 
 export default class Projects extends Component {
@@ -10,19 +11,32 @@ export default class Projects extends Component {
             isOpen: true,
             projects: [
                 {
-                    name: "Lolkekkek"
+                    name: "Eatigo-pwa",
+                    logo: "https://gitlab.com/uploads/-/system/project/avatar/3548238/eatigo_logo.png"
                 },
                 {
-                    name: "lolkekkek"
+                    name: "Silkroadexplore",
+                    logo: "https://cdn-images-1.medium.com/max/1200/1*4WwUOpgRvhKUL32bOTl2Aw.jpeg"
                 },
                 {
-                    name: "chkekeburek"
+                    name: "Eatigo-merchant",
+                    logo: "https://gitlab.com/uploads/-/system/project/avatar/3548238/eatigo_logo.png"
                 },
                 {
-                    name: "sukkekkeka"
+                    name: "Zentis",
+                    logo: "https://cdn-images-1.medium.com/max/1200/1*4WwUOpgRvhKUL32bOTl2Aw.jpeg"
                 },
                 {
-                    name: "vodkasuka"
+                    name: "Namba-taxi",
+                    logo: "https://img14.androidappsapk.co/300/b/c/b/kg.nambaapps.taxiclient.png"
+                },
+                {
+                    name: "Namba-food",
+                    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDORjezpK7RP7Kp8p6ir_M_hlpY7yML0aqhn3_EJnT2aixbfUUlg"
+                },
+                {
+                    name: "Eatigo-billing",
+                    logo: "https://gitlab.com/uploads/-/system/project/avatar/3548238/eatigo_logo.png"
                 }
             ]
         }
@@ -35,6 +49,7 @@ export default class Projects extends Component {
         this.setState({isOpen: !this.state.isOpen})
     }
     render() {
+        console.log(this.props)
         return (
             <div className="projects">
                 <div className="acardeon">
@@ -46,7 +61,7 @@ export default class Projects extends Component {
                     <ul className={"acardeon__description " + (this.state.isOpen ? 'show' : 'hidden')}>
                         {this.state.projects.map((item, index) => {
                             return (
-                                <li key={index}><Link to={"/projects"}>{item.name}</Link></li>
+                                <li key={index}><img src={item.logo} alt=""/><Link to={"/projects"}>{item.name}</Link></li>
                             )
                         })}
                     </ul>
