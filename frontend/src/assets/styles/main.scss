@@ -12,6 +12,12 @@ ul {
 a {
   text-decoration: none;
 }
+p {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
 // home page hedaer
 .header {
   border-bottom: 1px solid grey;
@@ -45,7 +51,7 @@ a {
     }
   }
 
-  @media screen and (max-width: 800px ){
+  @media screen and (max-width: 860px ){
     .header-logo {
       height: 40px;
       margin: auto 0;
@@ -140,7 +146,7 @@ a {
     }
   }
 
-  @media screen and (max-width: 800px ){
+  @media screen and (max-width: 860px ){
     .acardeon {
 
       .acardeon__title {
@@ -247,7 +253,7 @@ a {
     }
   }
 
-  @media screen and (max-width: 800px ){
+  @media screen and (max-width: 860px ){
     .header-logo {
       height: 40px;
       margin: auto 0;
@@ -257,10 +263,30 @@ a {
       }
     }
     .header-text {
+      display: flex;
       position: absolute;
       top: 50%;  
       left: 50%;
       transform: translate(-50%, -50%);
+
+      h1 {
+        margin: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: orange;
+      }
+      img {
+        width: 24px;
+        height: 22px;
+        margin: auto 5px;
+      }
+      h2 {
+        margin: 0;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 25px;
+        padding-top: 3px;
+
+      }
       a {
         &:link {
           color: white;
@@ -273,6 +299,98 @@ a {
           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
           font-size: 30px;
         }
+      }
+    }
+  }
+}
+
+// date range
+.date-range {
+  padding: 10px 16px 10px 10px;
+  text-align: right;
+}
+// usres-card 
+.users-card {
+  border: 1px solid black;
+  width: 380px;
+  margin: 0 auto;
+  padding: 10px;
+  min-height: 400px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media screen and (max-width: 860px ){
+  .users-card {
+    border: 1px solid black;
+    width: 90%;
+    padding: 10px;
+    min-height: 400px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    .user-card__content {
+      min-height: 300px;
+      padding: 5px;
+      margin: 10px auto;
+      overflow-y: scroll;
+      border: 1px solid black;
+      
+
+    }
+    .users-card__header {
+      display: flex;
+      position: relative;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .users-card__header-desc {
+      display: flex;
+      margin: 0 10px;
+
+      .right {
+        text-align: right;
+        right: 0;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px ){
+  .users-card {
+    border: 1px solid black;
+    padding: 10px;
+    min-height: 400px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    .user-card__content {
+      min-height: 300px;
+      padding: 5px;
+      margin: 10px auto;
+      overflow-y: scroll;
+      border: 1px solid black;
+      
+
+    }
+    .users-card__header {
+      display: flex;
+      position: relative;
+
+      img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+    .users-card__header-desc {
+      display: flex;
+      margin: 0 10px;
+
+      .right {
+        text-align: right;
+        right: 0;
+        position: absolute;
       }
     }
   }
