@@ -71,10 +71,10 @@ export default class UsersCard extends Component {
             <div className="user-cards">
                 {this.state.stendups.map((item, index) => {
                     return (
-                        <div key={index} className="users-card">
-                            <div className="users-card__header">
+                        <div key={index} className="user-card">
+                            <div className="user-card__header">
                                 <img src={item.logo} alt=""/>
-                                <div className="users-card__header-desc">
+                                <div className="user-card__header-desc">
                                     <div className="left">
                                         <h3>{item.nickname}</h3>
                                         <p>{item.name}</p>
@@ -86,9 +86,7 @@ export default class UsersCard extends Component {
                                 </div>
                             </div>
                             <div className="user-card__content">
-                                <div className="stendup">
-                                    {item.stendup}
-                                </div>
+                                {item.stendup}
                             </div>
                         </div>
                     )

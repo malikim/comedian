@@ -7,7 +7,6 @@ const ProjectsPage = () => {
   return (
     <div className='body'>
         <Header />
-        <DateRange />
         <UsersCard />
     </div>
   )
